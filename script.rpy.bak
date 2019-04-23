@@ -1,0 +1,102 @@
+﻿###################################################
+##                                               ##
+## Create Custom Transforms                      ##
+##                                               ##
+###################################################
+
+
+init:
+    transform centerleft:
+        xalign 0.25
+        yalign 1.0
+    transform centerright:
+        xalign 0.75
+        yalign 1.0
+    transform rightoffset:
+        xalign 0.95
+        yalign 1.0
+
+
+###################################################
+##                                               ##
+## Declare Variables                             ##
+##                                               ##
+###################################################
+
+
+# Characters
+define riley = Character("Riley")
+define aizawa = Character("Aizawa")
+define tenya = Character("tenyaName", dynamic=True)
+define shoto = Character("shotoName", dynamic=True)
+define hitoshi = Character("hitoshiName", dynamic=True)
+define rikido = Character("rikidoName", dynamic=True)
+define ochako = Character("ochakoName", dynamic=True)
+define izuku = Character("izukuName", dynamic=True)
+define katsuki = Character("katsukiName", dynamic=True)
+define eijiro = Character("eijiroName", dynamic=True)
+
+# Character Names
+define tenyaName = "???"
+define shotoName = "???"
+define ochakoName = "???"
+define izukuName = "???"
+define katsukiName = "???"
+define hitoshiName = "???"
+define rikidoName = "???"
+define eijiroName = "???"
+
+# Pronouns
+define shehethey = "they"
+define herhimthem = "them"
+define herhistheir = "their"
+define hershistheirs = "theirs"
+
+# Stats
+default smarts = 0
+default quirk = 0
+default money = 0
+
+# Love Points
+default izukupoints = 0
+default ochakopoints = 0
+default shotopoints = 0
+default tenyapoints = 0
+default katsukipoints = 0
+
+
+###################################################
+##                                               ##
+## Game Start                                    ##
+##                                               ##
+###################################################
+
+
+label start:
+
+
+###################################################
+##                                               ##
+## Call to Labels                                ##
+##                                               ##
+###################################################
+
+
+    call beginning #done
+    call feelings #done
+    call introduction #done
+    call seatchoice
+    call classtime1 #done
+    call lunchtime1
+    #call introductions
+## See corresponding .rpy files for details
+
+
+###################################################
+##                                               ##
+## Game End                                      ##
+##                                               ##
+###################################################
+
+
+    return
