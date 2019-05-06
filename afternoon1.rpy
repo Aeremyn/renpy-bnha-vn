@@ -53,37 +53,56 @@ label afternoon1:
                     "Iida looks happy."
                     scene bg cinema with fade
                     "You all make your way inside the theatre and shuffle into your seats."
-                    "Who do you sit next to?"
-                    call screen afternoon1movies
+                    menu:
+                        "Sit with Ochako.":
+                            call afternoon1moviesOchako
+                        "Sit with Deku.":
+                            call afternoon1moviesIzuku
+                        "Sit with Iida.":
+                            call afternoon1moviesTenya
                 "Horror movie, all the way!":
                     $ movieChoice = "horror"
                     $ ochakopoints += 1
                     "Ochako looks happy."
                     scene bg cinema with fade
                     "You all make your way inside the theatre and shuffle into your seats."
-                    "Who do you sit next to?"
-                    call screen afternoon1movies
+                    menu:
+                        "Sit with Ochako.":
+                            call afternoon1moviesOchako
+                        "Sit with Deku.":
+                            call afternoon1moviesIzuku
+                        "Sit with Iida.":
+                            call afternoon1moviesTenya
                 "An action movie sounds fun.":
                     $ movieChoice = "action"
                     $ izukupoints += 1
                     "Deku looks happy."
                     scene bg cinema with fade
                     "You all make your way inside the theatre and shuffle into your seats."
-                    "Who do you sit next to?"
-                    call screen afternoon1movies
+                    menu:
+                        "Sit with Ochako.":
+                            call afternoon1moviesOchako
+                        "Sit with Deku.":
+                            call afternoon1moviesIzuku
+                        "Sit with Iida.":
+                            call afternoon1moviesTenya
         "No thanks, maybe next time.":
             izuku "Oh, okay, no problem. See you later!"
             hide izuku with dissolve
             "You close the door, lay down on your bed, and immediately fall asleep."
-            "You wake up about an hour later. What should you do?"
+            "You wake up about an hour later."
             menu:
                 "Go to the Common Room.":
                     scene bg common-room with fade
                     "As you enter the room you notice some of your other classmates."
                     "Todoroki sits alone on a couch, reading. Meanwhile Bakugo, Kirishima, and Kaminari loudly play a videogame."
-                    "Who do you sit next to?"
-                    call screen afternoon1CommonRoom
+                    menu:
+                        "Play games with Bakugo and friends.":
+                            call afternoon1CommonRoomKatsuki
+                        "Read with Todoroki.":
+                            call afternoon1CommonRoomShoto
                 "Get some extra training in.":
+                    $ hitoshipoints += 1
                     scene bg training-grounds with fade
                     "As you approach you see a lone figure standing in the middle of the training grounds."
                     "The figure faces away from you but you'd recognize that indigo hair anywhere."
@@ -495,17 +514,18 @@ label afternoon1:
         "You then proceed to soundly defeat them all for the next two rounds."
         katsuki "Best of ten!"
         riley "Sure, let's go!"
-        "You continue on that way for hours, until finally Bakugo declares."
+        "You continue on that way for hours, until finally Bakugo declares:"
         katsuki "I'M DONE WITH THIS STUPID GAME!"
         "He throws the controller down in a fit of rage."
         eijiro "Hey Bakugo don't get so worked up, it's just a game."
         katsuki "Tch... whatever. Thanks for playing with us, I guess."
-        "He storms away, but he seemed to enjoy the challenge at least."
+        "He storms away, but he seemed to enjoy the challenge you posed at least."
         "You bid the other two good night and return to your room."
     return
 
     label afternoon1CommonRoomShoto:
         $ shotopoints += 1
+        $ todorokiBook = True
         "You sit down on the couch next to Todoroki."
         riley "What'cha reading?"
         "He starts, only just noticing your presence."

@@ -1,5 +1,41 @@
 label bedtime2:
     scene bg riley-dorm-night with fade
-    "You get back to your room, change into your pajamas, and play on your phone for half an hour before falling asleep."
+    if shinsoCat == True:
+        "You put Jiai down in his cat bed and lay down in your own bed, soon you feel a fuzzy creature lying next to you."
+        "You look over to see Jiai has already abadonned his own bed in favor of yours."
+        riley "Come on Jiai, back to your bed."
+        "You scoop him up and deposit him back into his nice soft cat bed, but before long he's back lying next to you."
+        "You try a couple more times to get Jiai to stay in his bed to no avail."
+        "After that you just give up and pet him until the both of you fall asleep."
+    else:
+        "You get back to your room, change into your pajamas, and before you can get into bed there's a knock at your door."
+        "You open it a little bit and are surprised to see Shinso standing there, looking incredibly uncomfortable."
+        "You look to what he's holding and realize it's a cat."
+        riley "Err... Hi Shinso."
+        "You open the door the rest of the way and invite him in.."
+        hitoshi "Err... sorry I know it's late... I came by to ask you for a favor though. Uhm... I found this cat outside, I think he was abandonned..."
+        "He scruches up his face a bit as he says the last bit."
+        hitoshi "Anyway I know it's kinda a hassle, but do you think you could take him in? I would but my parents wouldn't let me and they say I only have til morning then we're taking him to a shelter..."
+        "You think on it for a second."
+        hitoshi "Sorry I know that's asking a lot but I don't know where else to take him and-"
+        riley "Sure!"
+        "You pat the cat gently on the head and he purrs."
+        hitoshi "Oh, are you sure? Thank you! I hated the idea of this guy going to the shelter..."
+        riley "Yeah, I don't like that idea either."
+        "He hands the cat over to you and he purrs in your arms."
+        hitoshi "He likes you."
+        riley "That's good, what's his name anyway?"
+        hitoshi "I've been calling him Jiai, but you can name him whatever you want."
+        riley "No I like it, Jiai."
+        hitoshi "Oh I brought some supplies too. Here."
+        "He hands you a bag with a litterbox, some food, and a bag of litter."
+        riley "Oh thanks!"
+        hitoshi "Well I better go, it's late after all."
+        riley "Okay, see you around Shinso!"
+        hitoshi "Yeah, see you around and thanks again."
+        "With that he leaves leaving you alone with your new cat."
+        "You put Jiai down and finish getting ready for bed. By the time you're done he's already curled up sleeping on your pillow."
+        "You quietly get into bed, trying not to disturb your new sleeping buddy and soon you're asleep too."
+        $ shinsoCat = True
     scene bg black with fade
 return

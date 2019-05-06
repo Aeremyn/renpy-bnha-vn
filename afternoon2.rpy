@@ -7,8 +7,18 @@ label afternoon2:
     scene bg common-room with fade
     "As you enter the room you're immediately hit with the smell of acetone. You look over to see Ochako sitting on a couch painting her nails."
     "Todoroki, Bakugo, and Deku talk loudly while setting up a board game. Meanwhile Iida, despite everything, sits at a table desperately trying to study."
-    "Where do you sit?"
-    call screen afternoon2
+    menu:
+        "Hangout with someone in the common room.":
+            menu:
+                "Sit with Ochako.":
+                    call afternoon2nails
+                "Talk to Iida.":
+                    call afternoon2study
+                "Go join the board game.":
+                    call afternoon2game
+        "Get some fresh air.":
+            call afternoon2cat
+    # call screen afternoon2
 
     label afternoon2game:
         $ izukupoints += 1
@@ -33,7 +43,7 @@ label afternoon2:
         shoto "I swear if I don't get some wheat soon I'm going to burn these fields to ashes!"
         izuku "Calm down you guys!"
         "But Deku's pleas go unheard."
-        "In the end the pieces are scattered, the board half burned, and the four end up dragged to your classroom to explain to Aizawa why the fire alarm went off."
+        "In the end the pieces are scattered, the board half burned, and the four of you end up dragged to your classroom to explain to Aizawa why the fire alarm went off."
         scene bg front-of-classroom with fade
         show katsuki at centerleft
         show izuku at center
@@ -231,9 +241,76 @@ label afternoon2:
                 ochako "Yeah, get a laugh AT MY EXPENSE, jerks."
                 ochako "Ugh, I need to go wash this off, not that it really matters now..."
                 "She storms off."
-                katsuki "Ehh, she'll get over it. Thanks nerd."
+                katsuki "Ehh, she'll get over it. Thanks Riley."
                 riley "No problem!"
                 katsuki "Anyway, I should get to bed. Later."
                 riley "Night."
+    return
+
+    label afternoon2cat:
+        $ hitoshipoints += 1
+        $ shinsoCat = True
+        "You leave the common room and are greeted by a fresh breeze, much nicer than chemical smell inside."
+        "Since you didn't have anywhere specific in mind, you pick a random direction and start walking."
+        "You end up at a park and see familiar a shock of indigo hair sticking out from behind a bush."
+        riley "Shinso?"
+        hitoshi "Shhh."
+        "You walk over and see why he shushed you. A stray cat stands in front of him about 3 feet away. You squat down with him."
+        "He smiles and holds out his hand and the cat stands stock still. Then, ever so slowly, moves a step forward. Then another, and another."
+        "Soon the cat is softly headbutting Shinso's hand. Shinso smiles."
+        hitoshi "There you go, buddy."
+        "He squats there petting it for a minute before the cat decides to investigate you. You slowly move your hand to pet it and it purrs."
+        hitoshi "I think he likes you. Try picking him up."
+        riley "Uhh, okay."
+        "You carefully reach forward and try to pick up the cat and, to your surprise, it lets you."
+        "Once the cat is securely cradled in your arms, you stand and Shinso joins you."
+        riley "What now?"
+        hitoshi "Well it doesn't have a collar... but it's too tame to have been a stray for long... someone must have just abandonned it here..."
+        "He looks sort of angry, but just sighs."
+        hitoshi "I guess we should probably get it inside first, poor guy looks cold."
+        "He smiles at the cat again."
+        riley "Uh I guess we could take it to the dorms... I think animals are allowed, I mean Koda has a rabbit so..."
+        hitoshi "Okay, that sounds like a good idea."
+        "The two of you walk back to the dorms, stopping only once to pick up some cat necessities from a groccery store along the way."
+        "When you reach the front door Shinso stops."
+        hitoshi "Well, bye I guess, take good care of him."
+        riley "Err wait, I don't really know how to take care of a cat."
+        hitoshi "Really? You seem like you've handled cats before."
+        riley "Nope, never."
+        hitoshi "Well I guess I should teach you the basics then. It's not that hard."
+        riley "Yeah, come on lets go to my room."
+        "He nods."
+        hitoshi "Lead the way."
+        "The two of you make it to your room without meeting anyone else."
+        "You stop in front of the door."
+        riley "Err... my keys are in my pocket, could you?..."
+        "He gives you a look."
+        hitoshi "How about I just hold the cat."
+        riley "Oh yeah, that's a better idea."
+        "He takes the cat from you and you retrieve your keys and open the door. You're silently thankful your room hasn't had much time to get messy."
+        "Shinso walks in and you close the door behind him and he lets the cat jump to the floor. He immediately starts exploring his new surroundings. Shinso watches him with a smile."
+        "A thought occurs to you."
+        riley "We should probably name him."
+        hitoshi "What?"
+        riley "Well I figure if we're gonna have a pet he should probably have a name. We can't just keep calling him 'him'"
+        hitoshi "Oh, you're planning on keeping him? I thought you were gonna take it to a shelter or something."
+        riley "Well I guess I could but... I dunno that just feels wrong."
+        hitoshi "Yeah it does, doesn't it?"
+        "He looks towards the cat who is now rubbing against your legs and purring."
+        hitoshi "Hmm... how about... Jiai?"
+        riley "I like it! 'kindness' a good name for such a sweetheart!"
+        "You pick up Jiai, and then look to Shinso who is smiling at you or maybe the cat, you can't really tell."
+        riley "So teach me how to tak care of little Jiai."
+        hitoshi "Oh, right."
+        "Shinso gives you a basic primer on caring for and handling cats. You pay attention closely and learn all you can."
+        riley "Okay, I think I got it."
+        hitoshi "Okay, good. I guess I better go then, it's late."
+        riley "Yeah, but come back and visit sometime."
+        "He stops and looks a bit surprised."
+        riley "Err, at least to see Jiai?"
+        "You lift the cat sleeping in your arms just a bit."
+        "He smiles."
+        hitoshi "Okay, sure. See you soon Riley."
+        riley "Good night Shinso."
     return
 return

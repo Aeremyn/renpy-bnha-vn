@@ -64,24 +64,21 @@ default tenyapoints = 0
 default katsukipoints = 0
 default hitoshipoints = 0
 
-# Lunch Tracker
-define ochakoLunchNum = 1
-define ochakoLunchString = "%d" % ochakoLunchNum
-define shotoLunchNum = 1
-define shotoLunchString = "%d" % shotoLunchNum
-define katsukiLunchNum = 1
-define katsukiLunchString = "%d" % katsukiLunchNum
-define tenyaLunchNum = 1
-define tenyaLunchString = "%d" % tenyaLunchNum
-define izukuLunchNum = 1
-define izukuLunchString = "%d" % izukuLunchNum
-define hitoshiLunchNum = 1
-define hitoshiLunchString = "%d" % hitoshiLunchNum
+#Lunch Tracker
+default izukuLunch = 2
+default ochakoLunch = 2
+default shotoLunch = 2
+default tenyaLunch = 2
+default katsukiLunch = 2
+default hitoshiLunch = 2
 
 #Other
 define movieChoice = "none"
 define beatBakugo = False
 define ochakoMall = False
+define shinsoCat = False
+define bakugoBook = False
+define todorokiBook = False
 
 ###################################################
 ##                                               ##
@@ -97,7 +94,7 @@ label start:
 ##                                               ##
 ###################################################
 
-    # call screen test1
+    #call screen test1
     # call beginning #done
     # call feelings #done
     # call introduction #done
@@ -111,11 +108,14 @@ label start:
     # #icecream #done
     # call bedtime1 #done
     # call day2start #done
-    # call lunchtime2 #done
+    # call lunchLauncher #done
+    # #lunchtime2 #done
     # call class3 #done
     # call afternoon2 #done
     # call bedtime2 #done
-    # call day3start
+    # call day3start #done
+    # call lunchLauncher #done
+    # #lunchtime3 #wip
     # call devtest
 ## See corresponding .rpy files for details
     # call credits #done
